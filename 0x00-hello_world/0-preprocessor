@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc. -E $CILE > c
+gcc. -E $CILE > -o c
