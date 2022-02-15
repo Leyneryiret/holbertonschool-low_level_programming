@@ -20,7 +20,7 @@ return (-s);
 }
 else
 {
-_putchar(s + 48 );
+_putchar(s + 48);
 return (s);
 }
 }
