@@ -10,17 +10,17 @@
  */
 int print_last_digit(int n)
 {
-	int s;
+int s;
 
-	s = n % 10;
-	if (s < 0)
-	{
-		_putchar(-s + 48);
-		return (-s);
-	}
-	else
-	{
-		_putchar(s + 48 );
-		return (s);
-	}
+s = n % 10;
+if (s < 0)
+{
+_putchar(-s + 48);
+return (-s);
+}
+else
+{
+_putchar(s + 48 );
+return (s);
+}
 }
