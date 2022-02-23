@@ -1,7 +1,10 @@
 #include "main.h"
 
-
-
+/**
+ * puts2 - a function that prints every other character
+ * @str: is type char
+ * return: never
+ */
 
 void puts2(char *str)
 {
