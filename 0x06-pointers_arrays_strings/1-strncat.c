@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- *
- *
- *
- *
- *
+ * _strncat - function that concatenates two strings.
+ * @dest: an array of type char
+ * @src: an array of type char
+ * @n: is type integer
+ * Return: the pointer to dest.
  */
 
 char *_strncat(char *dest, char *src, int n)
