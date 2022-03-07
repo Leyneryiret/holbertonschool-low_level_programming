@@ -1,10 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
- * _strdup -
- *
- *
+ * _strdup - function that returns a pointer to a newly
+ * allocated space in memory
+ * @str: is un array typr char.
+ * Return: dupli
  */
+
 char *_strdup(char *str)
 {
 char *dupli;
@@ -14,12 +17,12 @@ if (str == NULL)
 return (NULL);
 for (i = 0; str[i] != '\0'; i++)
 ;
- dupli = (char *)malloc(sizeof(char) * (i + 1));
+dupli = (char *)malloc(sizeof(char) * (i + 1));
 if (dupli == NULL)
 return (NULL);
 
 for (j = 0; j <= i; j++)
 dupli[j] = str[j];
 
-return(dupli);
+return (dupli);
 }
