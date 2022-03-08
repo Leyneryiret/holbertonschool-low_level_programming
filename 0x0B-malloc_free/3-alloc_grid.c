@@ -41,4 +41,3 @@ newarra[i][j] = 0;
 
 return (newarra);
 }
-}
