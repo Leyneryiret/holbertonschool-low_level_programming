@@ -23,22 +23,22 @@ a = atoi(argv[1]);
 if (a > 25)
 {
 while (a >= 25)
-a = a - 25, sum++;
+a -= 25, sum++;
 }
 if (a > 10 && a < 25)
 {
 while (a >= 10)
-a = a - 10, sum++;
+a -= 10, sum++;
 }
 if (a > 5 && a < 10)
 {
 while (a >= 5)
-a = a - 5, sum++;
+a -= 5, sum++;
 }
 if (a > 2 && a < 5)
 {
 while (a >= 2)
-a = a - 2, sum++;
+a -= 2, sum++;
 }
 if (a == 1 || a == 2 || a == 5 || a == 10 || a == 25)
 {
