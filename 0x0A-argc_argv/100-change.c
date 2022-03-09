@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-int a, sum;
+int cents, sum;
 
 if (argc != 2)
 {
@@ -19,28 +19,28 @@ printf("Error\n");
 return (1);
 }
 sum = 0;
-a = atoi(argv[1]);
-if (a > 25)
+cents = atoi(argv[1]);
+if (cents > 25)
 {
-while (a >= 25)
-a -= 25, sum++;
+while (cents >= 25)
+cents -= 25, sum++;
 }
-if (a > 10 && a < 25)
+if (cents > 10 && cents < 25)
 {
-while (a >= 10)
-a -= 10, sum++;
+while (cents >= 10)
+cents -= 10, sum++;
 }
-if (a > 5 && a < 10)
+if (cents > 5 && cents < 10)
 {
-while (a >= 5)
-a -= 5, sum++;
+while (cents >= 5)
+cents -= 5, sum++;
 }
-if (a > 2 && a < 5)
+if (cents > 2 && cents < 5)
 {
-while (a >= 2)
-a -= 2, sum++;
+while (cents >= 2)
+cents -= 2, sum++;
 }
-if (a == 1 || a == 2 || a == 5 || a == 10 || a == 25)
+if (cents == 1 || cents == 2 || cents == 5 || cents == 10 || cents == 25)
 {
 sum++;
 }
