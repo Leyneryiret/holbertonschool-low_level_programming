@@ -20,8 +20,6 @@ return (1);
 }
 sum = 0;
 a = atoi(argv[1]);
-if (a < 0)
-printf("0\n"); 
 if (a > 25)
 {
 while (a >= 25)
@@ -43,7 +41,9 @@ while (a >= 2)
 a = a - 2, sum++;
 }
 if (a == 1 || a == 2 || a == 5 || a == 10 || a == 25)
+{
 sum++;
+}
 printf("%d\n", sum);
 return (sum);
 }
