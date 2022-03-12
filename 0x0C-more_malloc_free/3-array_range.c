@@ -19,7 +19,7 @@ if (min > max)
 return (NULL);
 
 guar = malloc(sizeof(*guar) * ((max - min) + 1));
-if (guar == '\0')
+if (guar == NULL)
 return (NULL);
 
 for (i = 0; min <= max; i++, min++)
