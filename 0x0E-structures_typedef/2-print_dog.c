@@ -14,8 +14,6 @@ if (((*d).name) == NULL)
 printf("Name: (nil)\n");
 printf("Name: %s\n", (*d).name);
 
-if (!(*d).age)
-printf("Age: (nil)\n");
 printf("Age: %f\n", (*d).age);
 
 if (((*d).owner) == NULL)
