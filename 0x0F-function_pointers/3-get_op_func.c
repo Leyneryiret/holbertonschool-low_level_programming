@@ -18,16 +18,15 @@ op_t ops[] = {
 {"%", op_mod},
 {NULL, NULL}
 };
-int i = 0, n = 0;
+int i = 0;
 
 while (i < 10)
 {
 if (ops->op[i] == s[0])
 {
-n = i;
 break;
 }
 i++;
 }
-return (ops[n / 2].f);
+return (ops[i / 2].f);
 }
