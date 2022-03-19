@@ -19,8 +19,7 @@ for (i = 0; i < n; i++)
 {
 valor = va_arg(nume, int);
 printf("%d", valor);
-
-if (separator && i > n - 1)
+if (separator)
 printf("%s", separator);
 }
 
