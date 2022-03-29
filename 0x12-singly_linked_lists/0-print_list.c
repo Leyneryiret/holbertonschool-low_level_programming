@@ -15,12 +15,14 @@ h1 = h;
 if (h1->str == NULL)
 {
 printf("[0] (nil)\n");
-h1 = h1->next, i = i + 1;
+h1 = h1->next;
+i = i + 1;
 }
-for (i; h1; i++)
+while (h1 != NULL)
 {
 printf("[%d] %s\n", h1->len, h1->str);
 h1 = h1->next;
+i++;
 }
 return (i);
 }
