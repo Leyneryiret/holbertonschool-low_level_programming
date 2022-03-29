@@ -1,7 +1,10 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _LISTS_H_
+#define _LISTS_H_
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdarg.h>
 #include <stddef.h>
 /**
  * struct list_s - singly linked list
