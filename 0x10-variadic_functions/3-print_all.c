@@ -1,22 +1,20 @@
 #include "variadic_functions.h"
 /**
+ * print_all - prints anything.
+ * @format: a list of types of arguments passed to the function.
  *
- *
- *
- *
+ * Return: no return.
  */
 void print_all(const char * const format, ...)
 {
 va_list parametr;
-int i = 0, j, k = 0;
+int i = 0, j = 0, k = 0;
 char *str;
 const char compara[] = "cift";
 
 va_start(parametr, format);
-
 while (format && format[i])
 {
-j = 0;
 while (compara[j])
 {
 if (format[i] == compara[j] && k)
