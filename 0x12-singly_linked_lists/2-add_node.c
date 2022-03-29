@@ -26,7 +26,10 @@ copy[i] = str[i];
 }
 new = malloc(sizeof(list_t));
 if (copy == NULL)
+{
+free(copy);
 return (NULL);
+}
 new->str = copy;
 new->len = lon;
 new->next = *head;
