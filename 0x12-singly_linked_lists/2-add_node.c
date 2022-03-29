@@ -13,14 +13,20 @@ int lon, i;
 char *copy;
 list_t *new;
 
+if (str == NULL || head == NULL)
+return (NULL);
 for (lon = 0; str[lon] != '\0'; lon++)
 ;
 copy = malloc((lon + 1) * sizeof(char));
+if (copy == NULL)
+return (NULL);
 for (i = 0; str[i] != '\0'; i++)
 {
 copy[i] = str[i];
 }
 new = malloc(sizeof(list_t));
+if (copy == NULL)
+return (NULL);
 new->str = copy;
 new->len = lon;
 new->next = *head;
