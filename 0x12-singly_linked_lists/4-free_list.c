@@ -9,4 +9,5 @@ if (head == NULL)
 return;
 free_list(head->next);
 free(head->str);
+free(head);
 }
