@@ -1,20 +1,20 @@
 #include "lists.h"
 /**
- * pop_listint - function that deletes the head node
- * @head: double pointer to head of list
+ * get_nodeint_at_index - returns the nth node of a  linked list
+ * @head: pointer to head of list
+ * @index: the posicion to return
+ * Return: the nodo to return
  */
- listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-  int i = 0;
-  unsigned int new_ret = 0;
-  listint_t *new_head = NULL;
+unsigned int i = 0;
 
-  if (head == NULL || *head == NULL)
-    return NULL;
-
-  for (i = 0; index, i++)
-    head = head->next;
-
-  new_ret = head->n;
-  return (new_ret);
+if (head == NULL)
+return (NULL);
+else
+{
+for (i = 0; i < index; i++)
+head = head->next;
+}
+return (head);
 }
