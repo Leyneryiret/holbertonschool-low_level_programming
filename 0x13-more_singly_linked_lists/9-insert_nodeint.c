@@ -1,29 +1,37 @@
 #include "lists.h"
 /**
- * get_nodeint_at_index - returns the nth node of a  linked list
- * @head: pointer to head of list
- * @index: the posicion to return
- * Return: the nodo to return
+ * insert_nodeint_at_index - inserts a new node at a given position
+ * @head: head of the list
+ * @index: place to insert node
+ * @n: value of the inserted node
+ * Return: pointer to head of list
  */
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
 {
-  listint_t *new = NULL, *otro = NULL, *ret = NULL;
-  unsigned int i = 0;
+listint_t *current, *new;
 
-  new = malloc(sizeof(listint_t));
-  if (new == NULL)
-    return (NULL);
-
-  new->n = n;
-  new->next = NULL;
-
-  otro = *head;
-  
-  for (i = 0; i < idx; i++)
-    {
-	otro = otro->next;
-    }
-  otro->next = new;
-  otro = ret;
-  return (*head);
+current = *head;
+new = malloc(sizeof(listint_t));
+if (new == NULL)
+return (NULL);
+new->n = n;
+if (index == 0)
+{
+new->next = current;
+*head = new;
+return (*head);
+}
+while (index > 1)
+{
+current = current->next;
+index--;
+if (!current)
+{
+free(new);
+return (NULL);
+}
+}
+new->next = current->next;
+current->next = new;
+return (new);
 }
