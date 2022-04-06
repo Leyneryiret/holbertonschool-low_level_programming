@@ -27,6 +27,7 @@ void cp(char *file_from, char *file_to)
 {
 int fd_read, res_read, fd_write, res_write;
 char *buf[1024];
+
 /* READ */
 fd_read = open(file_from, O_RDONLY);
 if (fd_read < 0)
@@ -47,7 +48,7 @@ _error(98, file_from);
 res_write = write(fd_write, buf, res_read);
 if (res_write < res_read)
 _error(99, file_to);
-}while (res_write == 1024)
+}while (res_write == 1024);
 if (close(fd_read) < 0)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_read);
