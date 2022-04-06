@@ -47,8 +47,7 @@ _error(98, file_from);
 res_write = write(fd_write, buf, res_read);
 if (res_write < res_read)
 _error(99, file_to);
-}
-while (res_write == 1024)
+}while (res_write == 1024)
 if (close(fd_read) < 0)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_read);
