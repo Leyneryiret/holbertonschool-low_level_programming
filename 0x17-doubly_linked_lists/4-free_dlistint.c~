@@ -1,0 +1,7 @@
+#include "lists.h"
+
+void free_dlistint(dlistint_t *head)
+{
+  free(*add_dnodeint_end);
+  free(head);
+}
