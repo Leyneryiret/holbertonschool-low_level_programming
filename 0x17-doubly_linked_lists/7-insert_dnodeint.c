@@ -1,4 +1,4 @@
-nclude "lists.h"
+#include "lists.h"
 /**
  * insert_dnodeint_at_index - add node in index
  * @h: head of the list
@@ -37,4 +37,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 		aux->next = add_dnodeint_end(h, n);
 	}
+return (NULL);
 }
