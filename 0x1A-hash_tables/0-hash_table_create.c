@@ -28,10 +28,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 
 	new_hash_table->size = size;
-	new_hash_table->array == nodos_table;
+	new_hash_table->array = nodos_table;
 
 	while (i < size)
-		hash_index[i] = NULL, i++;
+		nodos_table[i] = NULL, i++;
 
-	return (hash_table);
+	return (new_hash_table);
 }
