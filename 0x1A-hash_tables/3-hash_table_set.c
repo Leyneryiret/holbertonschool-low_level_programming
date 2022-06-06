@@ -35,9 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	nodo_to_add->key = strdup(key);
 	nodo_to_add->value = strdup(value);
-
-	if (ht->array[index] != NULL)
-		nodo_to_add->next = ht->array[index];
+	nodo_to_add->next = ht->array[index];
 
 	ht->array[index] = nodo_to_add;
 	return (1);
