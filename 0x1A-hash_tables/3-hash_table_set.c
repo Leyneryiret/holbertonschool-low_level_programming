@@ -10,7 +10,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index = 0;
-	hash_node_t *nodo_to_add = NULL;
+	hash_node_t *nodo_to_add = NULL, *aux = NULL;
 
 	if (!ht || !key || !value || *key == '\0')
 		return (0);
@@ -29,13 +29,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		nodo_to_add = nodo_to_add->next;
 	}
 
-	nodo_to_add = malloc(sizeof(hash_node_t));
+	aux = malloc(sizeof(hash_node_t));
 	if (!nodo_to_add)
 		return (0);
 
-	nodo_to_add->key = strdup(key);
-	nodo_to_add->value = strdup(value);
-	nodo_to_add->next = ht->array[index];
+	aux->key = strdup(key);
+	aux->value = strdup(value);
+	aux->next = ht->array[index];
 
 	ht->array[index] = nodo_to_add;
 	return (1);
