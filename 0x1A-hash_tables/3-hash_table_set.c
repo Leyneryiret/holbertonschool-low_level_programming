@@ -33,7 +33,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!nodo_to_add)
 		return (0);
 
-	nodo_to_add->key = key;
+	nodo_to_add->key = strdup(key);
 	if (nodo_to_add->key == NULL)
 		return (0);
 
