@@ -9,11 +9,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash_table_t *new_hash_table = NULL;
 	hash_node_t **nodos_table = NULL;
 
-	new_hash_table = malloc(sizeof(hash_table_t));
+	new_hash_table = calloc(1, sizeof(*new_hash_table));
 	if (!new_hash_table)
-		return (NULL);
+	        return (NULL);
 
-	nodos_table = malloc(sizeof(*nodos_table) * size);
+	nodos_table =  calloc(size, sizeof(*nodos_table));
 	if (!nodos_table)
 	{
 		free(new_hash_table);
