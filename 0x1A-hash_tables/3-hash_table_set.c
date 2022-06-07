@@ -11,10 +11,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index = 0;
 	hash_node_t *nodo_to_add = NULL, *aux = NULL;
-	
+
 	if (!ht || !key || !value)
 		return (0);
-	
+
 	index = key_index((unsigned char *)key, ht->size);
 	nodo_to_add = ht->array[index];
 
@@ -39,6 +39,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	aux->next = ht->array[index];
 
 	ht->array[index] = aux;
-	
+
 	return (1);
 }

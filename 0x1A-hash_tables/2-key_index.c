@@ -8,7 +8,7 @@
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 	unsigned long int index = 0;
-	int number = 0;
+	unsigned long int number = 0;
 
 	if (key != NULL || size != 0)
 	{
